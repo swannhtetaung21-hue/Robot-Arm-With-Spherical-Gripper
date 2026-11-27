@@ -325,29 +325,10 @@ The project demonstrated several important outcomes:
 
 ## 13. Project Documentation
 
-This repository is being organized to include the following project materials:
-
-- [x] Project overview and technical specifications
-- [x] Completed robotic arm photographs
-- [x] Mechanical exploded views
-- [x] Flexible spherical gripper photographs
-- [x] Experimental setup photographs
-- [ ] Embedded control source code
-- [ ] Computer vision implementation
-- [ ] SolidWorks CAD designs
-- [ ] Mechanical analysis files
-- [ ] Electrical connection diagrams
-- [ ] Demonstration videos
-- [ ] Senior engineering project report
-
-### Repository Contents
-
-| Directory | Description |
+| Resource | Description |
 |---|---|
-| [images/](images/) | Project photographs and mechanical design illustrations |
-| README.md | Project overview and technical documentation |
-
-Additional directories will be included as the project files are published.
+| [Project Images](images/) | Robotic arm prototype, mechanical exploded views, spherical gripper, and experimental setup |
+| [Technical Overview](README.md) | Project specifications, system architecture, engineering analysis, and experimental results |
 
 ## 14. Project Team
 
@@ -376,7 +357,7 @@ Vincent Mary School of Engineering, Science and Technology
 
 Senior engineering project documented in September 2026.
 
-Further source-code publication, testing documentation, and demonstration materials will be added to this repository.
+The project demonstrates the application of mechanical design, embedded systems, computer vision, robotic kinematics, and adaptive gripping technology within a multidisciplinary engineering platform.
 
 ---
 
