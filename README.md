@@ -1,4 +1,3 @@
-
 # 5DOF Robotic Arm with Flexible Spherical Gripper
 
 ### Design and Building of Robotic Arm with Flexible Spherical Gripper
@@ -9,6 +8,14 @@
 Vincent Mary School of Engineering, Science and Technology
 
 **Fields:** Robotics | Mechatronics | Artificial Intelligence | Embedded Systems | Computer Vision
+
+<p align="center">
+  <img src="images/robot-arm.png.png" width="350" alt="Completed 5DOF Robotic Arm">
+</p>
+
+<p align="center">
+  <em>Figure 1. Completed 5DOF robotic arm with flexible spherical gripper.</em>
+</p>
 
 ---
 
@@ -77,7 +84,7 @@ The robotic arm consists of five revolute joints:
 
 The maximum theoretical planar reach is:
 
-Rmax = 150 + 120 + 80 = **350 mm**
+**Rmax = 150 + 120 + 80 = 350 mm**
 
 The usable workspace is smaller because of joint limitations, structural geometry, and mechanical constraints.
 
@@ -89,6 +96,18 @@ The usable workspace is smaller because of joint limitations, structural geometr
 - 4:1 base gear reduction
 - MG996R servo actuation
 - Bearing-supported rotational structure
+
+### Robotic Arm Exploded View
+
+<p align="center">
+  <img src="images/robotarm_exploded-view.png.png" width="400" alt="Robotic Arm Exploded View">
+</p>
+
+<p align="center">
+  <em>Figure 2. Exploded view of the robotic arm mechanical assembly.</em>
+</p>
+
+The exploded view illustrates the mechanical components and assembly configuration of the robotic manipulator.
 
 ## 5. Embedded Control System
 
@@ -116,7 +135,9 @@ The Denavit-Hartenberg method defines the transformations between consecutive ro
 
 The complete homogeneous transformation is:
 
-T05 = A1 * A2 * A3 * A4 * A5
+$$
+T_0^5 = A_1 A_2 A_3 A_4 A_5
+$$
 
 ### Inverse Kinematics
 
@@ -124,11 +145,15 @@ For a desired position (x, y, z):
 
 **Base angle:**
 
-theta1 = atan2(y, x)
+$$
+\theta_1 = \operatorname{atan2}(y,x)
+$$
 
 **Radial distance:**
 
-r = sqrt(x² + y²)
+$$
+r = \sqrt{x^2+y^2}
+$$
 
 The wrist-center position is calculated by subtracting the end-effector offset based on the required tool pitch.
 
@@ -141,6 +166,13 @@ Detailed equations and coordinate-frame assignments are presented in the senior 
 The end effector uses the granular-jamming principle to grip objects of different geometries.
 
 A flexible membrane filled with granular material conforms to an object's surface. When vacuum is applied, the granular material becomes more rigid through jamming, improving contact and holding force.
+
+### Gripper Design and Fabrication
+
+| Mechanical Exploded View | Fabricated Spherical Gripper |
+|:---:|:---:|
+| <img src="images/Gripper_exploded_view.png.png" width="350" alt="Gripper Exploded View"> | <img src="images/Spherical_gripper.png.png" width="300" alt="Fabricated Spherical Gripper"> |
+| Figure 3. Gripper mechanical assembly | Figure 4. Fabricated flexible spherical gripper |
 
 ### Gripper Redesign
 
@@ -223,6 +255,20 @@ These results represent a theoretical structural assessment under specified assu
 
 ## 10. Results and Discussion
 
+### Experimental Setup
+
+<p align="center">
+  <img src="images/experimental-setup.png.png" width="550" alt="Robotic Arm Experimental Setup">
+</p>
+
+<p align="center">
+  <em>Figure 5. Robotic manipulator and computer vision experimental setup.</em>
+</p>
+
+The experimental setup integrates the robotic manipulator, flexible spherical gripper, external camera system, and embedded control hardware for robotic manipulation and object localization testing.
+
+### Project Outcomes
+
 The project demonstrated several important outcomes:
 
 - Development of a functional 5DOF mechanical robotic structure
@@ -232,6 +278,19 @@ The project demonstrated several important outcomes:
 - YOLO11 object detection on Raspberry Pi 5
 - Homography-based planar coordinate transformation
 - Improved embedded vision inference performance
+
+### Performance Summary
+
+| Performance Parameter | Result |
+|---|---|
+| Degrees of freedom | 5 DOF |
+| Theoretical maximum reach | 350 mm |
+| Tested gripper handling range | 150–200 g |
+| Base gear reduction | 4:1 |
+| Redesigned maximum simulated stress | 6.284 MPa |
+| Redesigned simulated factor of safety | 4.77 |
+| Simulated stress reduction | Approximately 9.1% |
+| Optimized vision inference speed | Approximately 5 FPS |
 
 ### Known Limitations
 
@@ -249,22 +308,50 @@ The project demonstrated several important outcomes:
 - Improve robotic positioning and mechanical stability.
 - Perform additional physical load and repeatability tests.
 
-## 12. Project Documentation
+## 12. Tools and Technologies
 
-This repository is being organized to include:
+| Category | Technologies |
+|---|---|
+| Mechanical Design | SolidWorks |
+| Structural Analysis | SolidWorks Simulation |
+| Manufacturing | FDM 3D Printing, PLA |
+| Embedded Systems | ESP32, PCA9685 |
+| Actuation | NEMA 17, MG996R, A4988 |
+| Computer Vision | YOLO11, Homography |
+| Computing Platform | Raspberry Pi 5 |
+| IoT Control | Blynk IoT |
+| Robotics | Forward and Inverse Kinematics |
+| Gripping Technology | Granular Jamming, Pneumatics |
 
-- Embedded control source code
-- Computer vision implementation
-- SolidWorks CAD designs
-- Mechanical analysis results
-- Electrical connection diagrams
-- Project photographs
-- Demonstration videos
-- Senior engineering project report
+## 13. Project Documentation
 
-## 13. Project Team
+This repository is being organized to include the following project materials:
 
-**Project Authors**
+- [x] Project overview and technical specifications
+- [x] Completed robotic arm photographs
+- [x] Mechanical exploded views
+- [x] Flexible spherical gripper photographs
+- [x] Experimental setup photographs
+- [ ] Embedded control source code
+- [ ] Computer vision implementation
+- [ ] SolidWorks CAD designs
+- [ ] Mechanical analysis files
+- [ ] Electrical connection diagrams
+- [ ] Demonstration videos
+- [ ] Senior engineering project report
+
+### Repository Contents
+
+| Directory | Description |
+|---|---|
+| [images/](images/) | Project photographs and mechanical design illustrations |
+| README.md | Project overview and technical documentation |
+
+Additional directories will be included as the project files are published.
+
+## 14. Project Team
+
+### Project Authors
 
 - Thu Ta Oo
 - Thu Ya Win Hein
@@ -272,16 +359,20 @@ This repository is being organized to include:
 - Keerapat Suppatarakasem
 - Puvanai Vibultaveesup
 
-**Project Advisors**
+### Project Advisors
 
 - Dr. Jiradech Kongthon
 - Dr. Jerapong Rojanarowan
 
-**Institution:** Assumption University of Thailand
+### Institution
+
+**Assumption University of Thailand**
+
+Vincent Mary School of Engineering, Science and Technology
 
 ---
 
-## 14. Project Status
+## 15. Project Status
 
 Senior engineering project documented in September 2026.
 
@@ -289,4 +380,6 @@ Further source-code publication, testing documentation, and demonstration materi
 
 ---
 
-*Developed as part of the Bachelor of Engineering program at Assumption University of Thailand.*
+<p align="center">
+  <em>Developed as part of the Bachelor of Engineering program at Assumption University of Thailand.</em>
+</p>
