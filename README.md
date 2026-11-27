@@ -146,7 +146,7 @@ For a desired position (x, y, z):
 **Base angle:**
 
 $$
-\theta_1 = \operatorname{atan2}(y,x)
+\theta_1 = \mathrm{atan2}(y,x)
 $$
 
 **Radial distance:**
