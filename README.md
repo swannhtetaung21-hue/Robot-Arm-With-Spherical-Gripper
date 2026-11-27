@@ -353,14 +353,6 @@ Vincent Mary School of Engineering, Science and Technology
 
 ---
 
-## 15. Project Status
-
-Senior engineering project documented in September 2026.
-
-The project demonstrates the application of mechanical design, embedded systems, computer vision, robotic kinematics, and adaptive gripping technology within a multidisciplinary engineering platform.
-
----
-
 <p align="center">
   <em>Developed as part of the Bachelor of Engineering program at Assumption University of Thailand.</em>
 </p>
